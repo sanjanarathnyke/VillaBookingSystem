@@ -18,7 +18,7 @@
         <div class="row">
             <div class="col-lg-6">
                 <div class="destinations-details__image">
-                    <img src="assets/images/destination/destination-details.jpg" alt="villoz">
+                    <img src="assets/images/villa/countries/thailand.png" alt="villoz">
                 </div>
             </div>
             <div class="col-lg-6">
@@ -74,7 +74,7 @@
             <div class="item">
                 <div class="villa-card wow fadeInUp" data-wow-delay="100ms">
                     <div class="villa-card__image">
-                        <img src="assets/images/villa/villa-1-1.jpg" alt="villoz">
+                        <img src="assets/images/villa/thailand/4.png" alt="villoz">
                         <div class="villa-card__flash">
                             <p class="villa-card__flash__label feature">Featured</p>
                         </div><!-- /.villa-card__label -->

@@ -65,13 +65,13 @@
 
 
                             <li class="dropdown">
-                                <a href="#">Pages</a>
+                                <a href="/">Home</a>
                             </li>
                             <li class="dropdown">
                                 <a href="{{ route('itempath') }}">Destination</a>
                             </li>
                             <li class="dropdown">
-                                <a href="#">Villa</a>
+                                <a href="{{ route('villas') }}">Villa</a>
                             </li>
                             <li class="dropdown">
                                 <a href="#">News</a>
@@ -87,11 +87,11 @@
                             <span></span>
                             <span></span>
                         </div><!-- /.mobile-nav__toggler -->
-                        <a href="contact.html" class="villoz-btn villoz-btn--border main-header__btn">
+                        <a href="{{ route('contact') }}" class="villoz-btn villoz-btn--border main-header__btn">
                             <i>Start Booking</i>
                             <span>Start Booking</span>
                         </a><!-- /.thm-btn main-header__btn -->
-                        <a href="#" class="search-toggler main-header__search">
+                        <a href="{{ route('contact') }}" class="search-toggler main-header__search">
                             <i class="icon-magnifying-glass" aria-hidden="true"></i>
                             <span class="sr-only">Search</span>
                         </a><!-- /.search-toggler -->

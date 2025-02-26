@@ -24,3 +24,11 @@ Route::get('single-item',function(){
 Route::get('/destiantion',function(){
     return view('public.itempath');
 })->name('itempath');
+
+Route::get('/contact',function(){
+    return view('Public.contact');
+})->name('contact');
+
+Route::get('/villas',function(){
+    return view('Public.villa-list');
+})->name('villas');

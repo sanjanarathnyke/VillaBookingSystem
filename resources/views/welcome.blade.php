@@ -508,10 +508,6 @@
                                 <h3 class="fact-one__bottom__title">See Premium Choice<br> for Vacation<br> Rentals</h3>
                                 <div class="row">
                                     <div class="col-md-6">
-                                        <a href="about.html" class="villoz-btn">
-                                            <i>Discover More</i>
-                                            <span>Discover More</span>
-                                        </a>
                                     </div>
                                     <div class="col-md-6">
                                         <p class="fact-one__bottom__text">

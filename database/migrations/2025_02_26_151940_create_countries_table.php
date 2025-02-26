@@ -11,16 +11,16 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('villas', function (Blueprint $table) {
+        Schema::create('countries', function (Blueprint $table) {
             $table->id();
+            $table->string('image'); // Image URL or file path
             $table->string('name');
-            $table->string('image');
-            $table->decimal('price', 8, 2);
+            $table->string('language_spoke');
+            $table->string('capital');
+            $table->string('currency');
+            $table->text('visa_requirements');
+            $table->decimal('area', 15, 2); // Assuming area in square kilometers
             $table->text('description');
-            $table->integer('bed_count');
-            $table->integer('guest_count');
-            $table->integer('bath_count');
-            $table->decimal('ratings', 2, 1); 
             $table->timestamps();
         });
     }
@@ -30,6 +30,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('villas');
+        Schema::dropIfExists('countries');
     }
 };
