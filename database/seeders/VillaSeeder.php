@@ -21,7 +21,7 @@ class VillaSeeder extends Seeder
             [
                 'name' => 'Sunset Villa',
                 'image' => 'assets/images/villa/africa/1.png',
-                'description_about' => 'A luxurious villa with ocean views, perfect for a relaxing vacation in South Africa.',
+                'address' => '123 Ocean Drive, Camps Bay, Cape Town 8005, South Africa',
                 'price' => 1500.00,
                 'bed_count' => 4,
                 'bath_count' => 3,
@@ -33,7 +33,7 @@ class VillaSeeder extends Seeder
             [
                 'name' => 'Ocean Breeze Villa',
                 'image' => 'assets/images/villa/africa/2.png',
-                'description_about' => 'A beautiful villa surrounded by nature, offering a serene escape in South Africa.',
+                'address' => '45 Victoria Road, Clifton, Cape Town 8005, South Africa',
                 'price' => 1700.00,
                 'bed_count' => 5,
                 'bath_count' => 4,
@@ -45,7 +45,7 @@ class VillaSeeder extends Seeder
             [
                 'name' => 'Savannah Retreat',
                 'image' => 'assets/images/villa/africa/3.png',
-                'description_about' => 'Nestled in the heart of the savannah, this villa provides a unique experience in South Africa.',
+                'address' => '78 Kruger Park Lane, Hoedspruit 1380, South Africa',
                 'price' => 1400.00,
                 'bed_count' => 4,
                 'bath_count' => 3,
@@ -57,7 +57,7 @@ class VillaSeeder extends Seeder
             [
                 'name' => 'Luxury Safari Lodge',
                 'image' => 'assets/images/villa/africa/4.png',
-                'description_about' => 'A private safari lodge offering luxury and adventure in the wilds of South Africa.',
+                'address' => '16 Safari Road, Sabi Sands Game Reserve, Mpumalanga 1350, South Africa',
                 'price' => 2500.00,
                 'bed_count' => 6,
                 'bath_count' => 5,
@@ -69,7 +69,7 @@ class VillaSeeder extends Seeder
             [
                 'name' => 'Cape Town Bliss',
                 'image' => 'assets/images/villa/africa/5.png',
-                'description_about' => 'A beachfront villa in Cape Town, offering breathtaking views and premium amenities.',
+                'address' => '291 Beach Boulevard, Sea Point, Cape Town 8001, South Africa',
                 'price' => 2200.00,
                 'bed_count' => 5,
                 'bath_count' => 4,
@@ -81,7 +81,7 @@ class VillaSeeder extends Seeder
             [
                 'name' => 'Luxury Vineyard Villa',
                 'image' => 'assets/images/villa/africa/6.png',
-                'description_about' => 'Surrounded by vineyards, this luxurious villa provides an unforgettable experience in South Africa.',
+                'address' => '42 Wine Estate Drive, Stellenbosch 7600, South Africa',
                 'price' => 2800.00,
                 'bed_count' => 6,
                 'bath_count' => 5,
@@ -95,7 +95,7 @@ class VillaSeeder extends Seeder
             [
                 'name' => 'Tropical Paradise Villa',
                 'image' => 'assets/images/villa/thailand/1.png',
-                'description_about' => 'This villa offers a tropical getaway with modern amenities in beautiful Thailand.',
+                'address' => '15 Moo 3, Choeng Thale, Thalang District, Phuket 83110, Thailand',
                 'price' => 1800.00,
                 'bed_count' => 4,
                 'bath_count' => 3,
@@ -107,7 +107,7 @@ class VillaSeeder extends Seeder
             [
                 'name' => 'Ocean View Villa',
                 'image' => 'assets/images/villa/thailand/2.png',
-                'description_about' => 'A villa by the beach with stunning ocean views and a perfect place to relax in Thailand.',
+                'address' => '107/25 Moo 3, Kamala Beach, Kathu, Phuket 83150, Thailand',
                 'price' => 2000.00,
                 'bed_count' => 5,
                 'bath_count' => 4,
@@ -119,7 +119,7 @@ class VillaSeeder extends Seeder
             [
                 'name' => 'Zen Garden Villa',
                 'image' => 'assets/images/villa/thailand/3.png',
-                'description_about' => 'This peaceful villa is set in a lush garden, offering a tranquil retreat in Thailand.',
+                'address' => '84 Moo 4, Bophut, Koh Samui, Surat Thani 84320, Thailand',
                 'price' => 1500.00,
                 'bed_count' => 4,
                 'bath_count' => 3,
@@ -131,7 +131,7 @@ class VillaSeeder extends Seeder
             [
                 'name' => 'Luxury Thai Villa',
                 'image' => 'assets/images/villa/thailand/4.png',
-                'description_about' => 'A luxury villa offering high-end amenities and exquisite views in Thailand.',
+                'address' => '19/56 Soi Naya, Rawai, Mueang Phuket, Phuket 83130, Thailand',
                 'price' => 2500.00,
                 'bed_count' => 6,
                 'bath_count' => 5,
@@ -143,7 +143,7 @@ class VillaSeeder extends Seeder
             [
                 'name' => 'Mountain Retreat Villa',
                 'image' => 'assets/images/villa/thailand/5.png',
-                'description_about' => 'Nestled in the mountains, this villa offers a stunning retreat in Thailand.',
+                'address' => '121 Moo 1, Mae Rim, Chiang Mai 50180, Thailand',
                 'price' => 2300.00,
                 'bed_count' => 5,
                 'bath_count' => 4,
@@ -155,7 +155,7 @@ class VillaSeeder extends Seeder
             [
                 'name' => 'Beachfront Luxury Villa',
                 'image' => 'assets/images/villa/thailand/6.png',
-                'description_about' => 'Enjoy ultimate luxury by the beach in this stunning villa in Thailand.',
+                'address' => '68/10 Moo 5, Ban Tai, Koh Phangan, Surat Thani 84280, Thailand',
                 'price' => 2800.00,
                 'bed_count' => 6,
                 'bath_count' => 5,
@@ -167,7 +167,7 @@ class VillaSeeder extends Seeder
             [
                 'name' => 'Seaside Villa',
                 'image' => 'assets/images/villa/thailand/7.png',
-                'description_about' => 'A seaside villa offering an unforgettable experience with panoramic views of the ocean.',
+                'address' => '56/24 Moo 6, Lamai Beach, Koh Samui, Surat Thani 84310, Thailand',
                 'price' => 3000.00,
                 'bed_count' => 7,
                 'bath_count' => 6,
@@ -181,7 +181,7 @@ class VillaSeeder extends Seeder
             [
                 'name' => 'Beachfront Villa',
                 'image' => 'assets/images/villa/aus/1.png',
-                'description_about' => 'Located near the famous beaches of Australia, this villa offers stunning views and luxurious amenities.',
+                'address' => '45 Hastings Street, Noosa Heads, Queensland 4567, Australia',
                 'price' => 2000.00,
                 'bed_count' => 5,
                 'bath_count' => 4,
@@ -193,7 +193,7 @@ class VillaSeeder extends Seeder
             [
                 'name' => 'Outback Villa',
                 'image' => 'assets/images/villa/aus/2.png',
-                'description_about' => 'An amazing villa located in the heart of the Australian Outback with a unique experience.',
+                'address' => '78 Red Centre Way, Alice Springs, Northern Territory 0870, Australia',
                 'price' => 1800.00,
                 'bed_count' => 4,
                 'bath_count' => 3,
@@ -205,7 +205,7 @@ class VillaSeeder extends Seeder
             [
                 'name' => 'Coastal Retreat Villa',
                 'image' => 'assets/images/villa/aus/3.png',
-                'description_about' => 'A coastal retreat villa offering a perfect blend of luxury and nature in Australia.',
+                'address' => '23 Great Ocean Road, Apollo Bay, Victoria 3233, Australia',
                 'price' => 2300.00,
                 'bed_count' => 6,
                 'bath_count' => 5,
@@ -217,7 +217,7 @@ class VillaSeeder extends Seeder
             [
                 'name' => 'Luxury Vineyard Villa',
                 'image' => 'assets/images/villa/aus/4.png',
-                'description_about' => 'A wine lover’s dream, this villa is located near Australia’s famous vineyards.',
+                'address' => '56 Vineyard Drive, Barossa Valley, South Australia 5352, Australia',
                 'price' => 2500.00,
                 'bed_count' => 6,
                 'bath_count' => 5,
@@ -229,7 +229,7 @@ class VillaSeeder extends Seeder
             [
                 'name' => 'Island Escape Villa',
                 'image' => 'assets/images/villa/aus/5.png',
-                'description_about' => 'A private island villa offering luxurious seclusion and breathtaking ocean views.',
+                'address' => '17 Resort Drive, Hamilton Island, Queensland 4803, Australia',
                 'price' => 3500.00,
                 'bed_count' => 7,
                 'bath_count' => 6,
@@ -241,7 +241,7 @@ class VillaSeeder extends Seeder
             [
                 'name' => 'Luxury Eco Villa',
                 'image' => 'assets/images/villa/aus/6.png',
-                'description_about' => 'An eco-friendly luxury villa with sustainable features in Australia.',
+                'address' => '89 Rainforest Way, Daintree, Queensland 4873, Australia',
                 'price' => 3000.00,
                 'bed_count' => 6,
                 'bath_count' => 5,
@@ -255,7 +255,7 @@ class VillaSeeder extends Seeder
             [
                 'name' => 'Mediterranean Villa',
                 'image' => 'assets/images/villa/spain/1.png',
-                'description_about' => 'A charming villa with a Mediterranean feel, perfect for a holiday in Spain.',
+                'address' => 'Calle Palmera 25, Marbella, Málaga 29602, Spain',
                 'price' => 1200.00,
                 'bed_count' => 3,
                 'bath_count' => 2,
@@ -267,7 +267,7 @@ class VillaSeeder extends Seeder
             [
                 'name' => 'Gothic Villa',
                 'image' => 'assets/images/villa/spain/2.png',
-                'description_about' => 'A gothic-inspired villa in the heart of Spain with stunning architectural details.',
+                'address' => 'Carrer de Mallorca 401, Barcelona 08013, Spain',
                 'price' => 1800.00,
                 'bed_count' => 4,
                 'bath_count' => 3,
@@ -279,7 +279,7 @@ class VillaSeeder extends Seeder
             [
                 'name' => 'Andalusian Villa',
                 'image' => 'assets/images/villa/spain/3.png',
-                'description_about' => 'A traditional Andalusian villa with a mix of modern amenities and historic charm.',
+                'address' => 'Calle Castillo 8, Seville 41003, Spain',
                 'price' => 1600.00,
                 'bed_count' => 4,
                 'bath_count' => 3,
@@ -291,7 +291,7 @@ class VillaSeeder extends Seeder
             [
                 'name' => 'Seaside Villa',
                 'image' => 'assets/images/villa/spain/4.png',
-                'description_about' => 'A luxurious seaside villa with breathtaking views of the Spanish coastline.',
+                'address' => 'Paseo Maritimo 32, Ibiza Town 07800, Spain',
                 'price' => 2500.00,
                 'bed_count' => 6,
                 'bath_count' => 5,
@@ -303,7 +303,7 @@ class VillaSeeder extends Seeder
             [
                 'name' => 'Hilltop Villa',
                 'image' => 'assets/images/villa/spain/5.png',
-                'description_about' => 'Perched on a hill, this villa offers stunning views and luxurious comfort.',
+                'address' => 'Calle Mirador 15, Granada 18010, Spain',
                 'price' => 2200.00,
                 'bed_count' => 5,
                 'bath_count' => 4,
@@ -315,7 +315,7 @@ class VillaSeeder extends Seeder
             [
                 'name' => 'Spanish Colonial Villa',
                 'image' => 'assets/images/villa/spain/6.png',
-                'description_about' => 'A stunning Spanish colonial villa with historic charm and modern luxury.',
+                'address' => 'Avenida de la Palmera 17, Córdoba 14011, Spain',
                 'price' => 2800.00,
                 'bed_count' => 6,
                 'bath_count' => 5,
@@ -327,7 +327,7 @@ class VillaSeeder extends Seeder
             [
                 'name' => 'Modern Spanish Villa',
                 'image' => 'assets/images/villa/spain/7.png',
-                'description_about' => 'A sleek modern villa combining contemporary design with traditional Spanish elements.',
+                'address' => 'Calle Velázquez 48, Madrid 28001, Spain',
                 'price' => 3000.00,
                 'bed_count' => 7,
                 'bath_count' => 6,
@@ -341,7 +341,7 @@ class VillaSeeder extends Seeder
             [
                 'name' => 'Alpine Retreat Villa',
                 'image' => 'assets/images/villa/swizz/1.png',
-                'description_about' => 'A luxury retreat in the Swiss Alps, perfect for winter vacations and skiing.',
+                'address' => '24 Dorfstrasse, Zermatt 3920, Switzerland',
                 'price' => 2200.00,
                 'bed_count' => 5,
                 'bath_count' => 4,
@@ -353,7 +353,7 @@ class VillaSeeder extends Seeder
             [
                 'name' => 'Lakeview Villa',
                 'image' => 'assets/images/villa/swizz/2.png',
-                'description_about' => 'A charming villa overlooking Lake Geneva with panoramic views.',
+                'address' => '78 Quai du Mont-Blanc, Geneva 1201, Switzerland',
                 'price' => 2500.00,
                 'bed_count' => 6,
                 'bath_count' => 5,
@@ -365,7 +365,7 @@ class VillaSeeder extends Seeder
             [
                 'name' => 'Swiss Chalet Villa',
                 'image' => 'assets/images/villa/swizz/3.png',
-                'description_about' => 'A cozy Swiss chalet villa with rustic charm and modern amenities.',
+                'address' => '35 Promenade, Gstaad 3780, Switzerland',
                 'price' => 2000.00,
                 'bed_count' => 4,
                 'bath_count' => 3,
@@ -377,7 +377,7 @@ class VillaSeeder extends Seeder
             [
                 'name' => 'Mountain View Villa',
                 'image' => 'assets/images/villa/swizz/4.png',
-                'description_about' => 'A luxurious villa with breathtaking views of the Swiss Alps.',
+                'address' => '42 Bergstrasse, Interlaken 3800, Switzerland',
                 'price' => 2800.00,
                 'bed_count' => 6,
                 'bath_count' => 5,
@@ -389,7 +389,7 @@ class VillaSeeder extends Seeder
             [
                 'name' => 'Swiss Luxury Retreat',
                 'image' => 'assets/images/villa/swizz/5.png',
-                'description_about' => 'A high-end luxury villa in the heart of the Swiss Alps.',
+                'address' => '19 Via Serlas, St. Moritz 7500, Switzerland',
                 'price' => 3200.00,
                 'bed_count' => 7,
                 'bath_count' => 6,
@@ -401,7 +401,7 @@ class VillaSeeder extends Seeder
             [
                 'name' => 'Alpine Escape Villa',
                 'image' => 'assets/images/villa/swizz/6.png',
-                'description_about' => 'An alpine escape villa offering total privacy and serenity in the Swiss mountains.',
+                'address' => '56 Seestrasse, Lucerne 6003, Switzerland',
                 'price' => 3500.00,
                 'bed_count' => 7,
                 'bath_count' => 6,

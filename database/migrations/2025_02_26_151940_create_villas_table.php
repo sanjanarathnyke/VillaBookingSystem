@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('image'); // Image URL or file path
-            $table->text('description_about');
+            $table->text('address');
             $table->decimal('price', 10, 2); // Assuming price with two decimal places
             $table->integer('bed_count');
             $table->integer('bath_count');

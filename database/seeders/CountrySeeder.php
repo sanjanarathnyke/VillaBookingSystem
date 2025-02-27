@@ -18,7 +18,7 @@ class CountrySeeder extends Seeder
 
         $countries = [
             [
-                'image' => 'assets/images/villa/countries/afrca.jpg',
+                'image' => 'assets/images/villa/countries/africa.jpg',
                 'name' => 'South Africa',
                 'language_spoke' => 'Afrikaans, English, Zulu, Xhosa, and others',
                 'capital' => 'Pretoria (administrative), Cape Town (legislative), Bloemfontein (judicial)',
@@ -54,7 +54,7 @@ class CountrySeeder extends Seeder
                 'updated_at' => $now,
             ],
             [
-                'image' => 'assets/images/villa/countries/swis.png',
+                'image' => 'assets/images/villa/countries/swiz.png',
                 'name' => 'Switzerland',
                 'language_spoke' => 'German, French, Italian, Romansh',
                 'capital' => 'Bern',
