@@ -68,10 +68,10 @@
                                 <a href="/">Home</a>
                             </li>
                             <li class="dropdown">
-                                <a href="{{ route('itempath') }}">Destination</a>
+                                <a href="{{ route('show-countries') }}">Destination</a>
                             </li>
                             <li class="dropdown">
-                                <a href="{{ route('villas') }}">Villa</a>
+                                <a href="{{ route('villas.index') }}">Villa</a>
                             </li>
                             <li class="dropdown">
                                 <a href="#">News</a>
