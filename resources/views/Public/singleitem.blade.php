@@ -103,7 +103,7 @@
                                 <i class="fa fa-star"></i>
                             </div>
                             <p class="villa-card-two__address">{{ $villa->address }}</p>
-                            <h3 class="villa-card-two__title"><a href="{{ route('villas') }}">{{ $villa->name }}</a></h3><!-- /.villa-card-two__title -->
+                            <h3 class="villa-card-two__title"><a href="{{ route('payment',$villa->id) }}">{{ $villa->name }}</a></h3><!-- /.villa-card-two__title -->
                             <div class="villa-card-two__price">${{ $villa->price }} <span class="villa-card-two__price__shift">/ Night</span></div>
                         </div><!-- /.villa-card-two__content -->
                     </div><!-- /.villa-card-two__image -->

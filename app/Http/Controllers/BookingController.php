@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\BookingConfirmation;
 use App\Models\Booking;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class BookingController extends Controller
 {
@@ -20,6 +22,10 @@ class BookingController extends Controller
 
         Booking::create($validated);
 
-        return redirect()->back()->with('success', 'Booking successful!');
+        // Send the email
+        Mail::to($validated['email'])->send(new BookingConfirmation($validated));
+
+        // Redirect or return a response
+        return redirect()->back()->with('success', 'Booking confirmed! Check your email for details.');
     }
 }
