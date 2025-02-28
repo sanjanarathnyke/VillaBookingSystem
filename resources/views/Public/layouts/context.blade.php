@@ -87,10 +87,6 @@
                             <span></span>
                             <span></span>
                         </div><!-- /.mobile-nav__toggler -->
-                        <a href="{{ route('contact') }}" class="villoz-btn villoz-btn--border main-header__btn">
-                            <i>Start Booking</i>
-                            <span>Start Booking</span>
-                        </a><!-- /.thm-btn main-header__btn -->
                         <a href="{{ route('contact') }}" class="search-toggler main-header__search">
                             <i class="icon-magnifying-glass" aria-hidden="true"></i>
                             <span class="sr-only">Search</span>

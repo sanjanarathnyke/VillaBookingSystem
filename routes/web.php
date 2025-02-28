@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\BookingController;
 use App\Http\Controllers\CountryController;
 use App\Http\Controllers\PaymentController;
 use App\Http\Controllers\VillaController;
@@ -48,3 +49,4 @@ Route::get('/villas', [VillaController::class, 'index'])->name('villas.index');
 
 Route::get('/payment/{id}', [PaymentController::class, 'show'])->name('payment');
 
+Route::post('/book-tour', [BookingController::class, 'store'])->name('storevalues');
