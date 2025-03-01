@@ -21,9 +21,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-// Route::get('single-item',function(){
-//     return view('Public.singleitem');
-// })->name('single-item');
+Route::get('single-item',function(){
+    return view('Public.singleitem');
+})->name('single-item');
 
 // Route::get('/destiantion',function(){
 //     return view('public.itempath');

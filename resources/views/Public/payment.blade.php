@@ -47,11 +47,6 @@
                         <h5 class="villa-details-one__meta__number">{{$villa->guest_count}}</h5>
                         <p class="villa-details-one__meta__name">Guests</p>
                     </div><!-- meta-item -->
-                    <div class="villa-details-one__meta__item">
-                        <div class="villa-details-one__meta__icon"><span class="icon-square-measument"></span></div>
-                        <h5 class="villa-details-one__meta__number">460</h5>
-                        <p class="villa-details-one__meta__name">Sqft Size</p>
-                    </div><!-- meta-item -->
                 </div>
             </div>
         </div>

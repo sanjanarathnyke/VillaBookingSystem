@@ -57,7 +57,7 @@
                 <div class="container-fluid">
                     <div class="main-header__logo">
                         <a href="index.html">
-                            <img src="assets/images/logo-light.png" alt="Villoz HTML" width="125">
+                            <img src="{{ asset('assets/images/logo-light.png') }}" alt="Villoz HTML" width="125">
                         </a>
                     </div><!-- /.main-header__logo -->
                     <nav class="main-header__nav main-menu">
@@ -111,7 +111,7 @@
             <div class="main-footer__top">
                 <div class="container">
                     <a href="index.html" class="main-footer__logo">
-                        <img src="assets/images/logo-light.png" width="125" alt="Villoz HTML Template">
+                        <img src="{{ asset('assets/images/logo-light.png') }}" width="125" alt="Villoz HTML Template">
                     </a>
                     <div class="main-footer__social">
                         <a href="https://twitter.com">
@@ -148,7 +148,7 @@
                                         </button>
                                     </form><!-- /.footer-widget__form -->
                                     <div class="mc-form__response"></div><!-- /.mc-form__response -->
-                                    <p class="footer-widget__copyright">© Copyright 2023 by <a href="index.html">Villoz HTML Template</a>
+                                    <p class="footer-widget__copyright">© Copyright 2025 by <a href="index.html">Villoz</a>
                                     </p>
                                     <!-- /.footer-widget__copyright -->
                                 </div><!-- /.footer-widget -->
