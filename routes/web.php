@@ -3,6 +3,7 @@
 use App\Http\Controllers\BookingController;
 use App\Http\Controllers\CountryController;
 use App\Http\Controllers\PaymentController;
+use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\VillaController;
 use Illuminate\Support\Facades\Route;
 
@@ -17,36 +18,45 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// Redirect home to login page
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('home');
 
-Route::get('single-item',function(){
+// Public Routes (Accessible by any user)
+Route::get('single-item', function () {
     return view('Public.singleitem');
 })->name('single-item');
 
-// Route::get('/destiantion',function(){
-//     return view('public.itempath');
-// })->name('itempath');
-
-Route::get('/contact',function(){
+Route::get('/contact', function () {
     return view('Public.contact');
 })->name('contact');
 
-// Route::get('/villas',function(){
-//     return view('Public.villa-list');
-// })->name('villas');
-
-Route::get('/countries',[CountryController::class,'showCountries'])->name('show-countries');
-
-Route::get('/country/{id}', [CountryController::class, 'showSingleCountry'])->name('single-country');
-
+Route::get('/countries', [CountryController::class, 'showCountries'])->name('show-countries');
+Route::get('/country/{id}', [CountryController::class, 'showSingleCountry'])->name('singleitem');
 Route::get('/villas', [VillaController::class, 'index'])->name('villas.index');
 
-// Route::get('/payment',function(){
-//     return view('Public.payment');
-// })->name('payment');
+// Payment Route (Restricted to Logged-in Users)
+Route::get('/payment/{id}', [PaymentController::class, 'show'])
+    ->middleware('auth')
+    ->name('payment');
 
-Route::get('/payment/{id}', [PaymentController::class, 'show'])->name('payment');
+// Booking Route (Restricted to Logged-in Users)
+Route::post('/book-tour', [BookingController::class, 'store'])
+    ->middleware('auth')
+    ->name('storevalues');
 
-Route::post('/book-tour', [BookingController::class, 'store'])->name('storevalues');
+
+// Authentication Routes
+Route::get('/register', [RegisterController::class, 'showRegisterForm'])->name('register');
+Route::post('/register', [RegisterController::class, 'register'])->name('register-user');
+
+Route::get('/login', [RegisterController::class, 'showLoginForm'])->name('login');
+Route::post('/login', [RegisterController::class, 'login'])->name('login-user');
+
+// Dashboard Route (Restricted to Admin Emails)
+Route::middleware('checkAdminEmail')->group(function () {
+    Route::get('/dashboard', function () {
+        return view('Public.dashboard');
+    })->name('dashboard');
+});

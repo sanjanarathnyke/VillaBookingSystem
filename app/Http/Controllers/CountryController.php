@@ -16,10 +16,16 @@ class CountryController extends Controller
 
     public function showSingleCountry($id)
     {
-        $country = Country::findOrFail($id);
-        $villas = Villa::where('country_id', $id)->get();
-        return view('Public.singleitem', compact('country','villas'));
+        $country = Country::find($id);
+
+        if (!$country) {
+            return abort(404, 'Country not found');
+        }
+
+        // Ensure $villas is always defined
+        $villas = Villa::where('country_id', $id)->get()->unique();
+
+        // dd($villas);
+        return view('Public.singleitem', compact('country', 'villas'));
     }
-    
-    
 }

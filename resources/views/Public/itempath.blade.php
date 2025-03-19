@@ -18,7 +18,7 @@
         <div class="row">
             @foreach ($displayCountries as $country)
             <div class="col-lg-2 col-md-6 wow fadeInUp" data-wow-delay="100ms">
-                <a href="{{ route('single-country', $country->id) }}" class="destination-two__item">
+                <a href="{{ route('singleitem', $country->id) }}" class="destination-two__item">
                     <img src="{{ asset($country->image) }}" alt="villoz">
                     <span class="destination-two__item__name">{{$country->name}}</span>
                 </a>

@@ -52,6 +52,7 @@
     <div class="page-wrapper">
 
         {{--header section starts--}}
+
         <div class="main-header">
             <header class="main-header__bottom main-header--two sticky-header sticky-header--normal">
                 <div class="container-fluid">
@@ -81,24 +82,12 @@
                             </li>
                         </ul>
                     </nav><!-- /.main-header__nav -->
-                    <div class="main-header__right">
-                        <div class="mobile-nav__btn mobile-nav__toggler">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </div><!-- /.mobile-nav__toggler -->
-                        <a href="{{ route('contact') }}" class="search-toggler main-header__search">
-                            <i class="icon-magnifying-glass" aria-hidden="true"></i>
-                            <span class="sr-only">Search</span>
-                        </a><!-- /.search-toggler -->
-                        <a href="cart.html" class="main-header__cart">
-                            <i class="icon-shopping-cart" aria-hidden="true"></i>
-                            <span class="sr-only">Search</span>
-                        </a><!-- /.search-toggler -->
-                    </div><!-- /.main-header__right -->
+
+                    <!-- /.main-header__right -->
                 </div><!-- /.container-fluid -->
             </header><!-- /.main-header -->
-        </div><!-- /.main-header -->
+        </div>
+        
         {{--header section ends--}}
         
         @yield('content');

@@ -23,6 +23,6 @@ class Country extends Model
     // Define the relationship with the Villa model (One to Many)
     public function villas()
     {
-        return $this->hasMany(Villa::class);
+        return $this->hasMany(Villa::class,'country_id');
     }
 }
