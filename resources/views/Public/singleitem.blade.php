@@ -44,7 +44,7 @@
 @endif
 
 
-{{--this section is for display the villas in  their perticuler countries--}}
+{{--this section is for display the villas in their perticuler countries--}}
 {{-- <section class="villa-two">
     <div class="sec-title text-center">
         <h6 class="sec-title__tagline">our villas for rent</h6>
@@ -53,15 +53,15 @@
     <div class="container">
         <div class="row">
             @foreach($villas as $villa)
-                <div class="col-md-4">
-                    <div class="villa-card">
-                        <img src="{{ asset($villa->image) }}" alt="{{ $villa->name }}" class="img-fluid">
-                        <h4>{{ $villa->name }}</h4>
-                        <p>{{ $villa->description_about }}</p>
-                        <p><strong>Price:</strong> ${{ $villa->price }}</p>
-                        <a href="{{ route('payment', $villa->id) }}" class="btn btn-primary">Proceed to Payment</a>
-                    </div>
+            <div class="col-md-4">
+                <div class="villa-card">
+                    <img src="{{ asset($villa->image) }}" alt="{{ $villa->name }}" class="img-fluid">
+                    <h4>{{ $villa->name }}</h4>
+                    <p>{{ $villa->description_about }}</p>
+                    <p><strong>Price:</strong> ${{ $villa->price }}</p>
+                    <a href="{{ route('payment', $villa->id) }}" class="btn btn-primary">Proceed to Payment</a>
                 </div>
+            </div>
             @endforeach
         </div>
     </div>
@@ -73,7 +73,8 @@
             <h6 class="sec-title__tagline">our villas for rent</h6>
             <h3 class="sec-title__title">Explore Villas Available<br> for the Rent</h3>
         </div>
-        <div class="villa-one__carousel villoz-owl__carousel villoz-owl__carousel--with-shadow villoz-owl__carousel--basic-nav owl-carousel owl-theme" data-owl-options='{
+        <div class="villa-one__carousel villoz-owl__carousel villoz-owl__carousel--with-shadow villoz-owl__carousel--basic-nav owl-carousel owl-theme"
+            data-owl-options='{
             "items": 1,
             "margin": 30,
             "loop": false,
@@ -95,15 +96,15 @@
             }
         }'>
             @foreach($villas as $villa)
-                <div class="item">
-                    <div class="villa-card wow fadeInUp" data-wow-delay="100ms">
-                        <div class="villa-card__image">
-                            <img src="{{ asset($villa->image) }}" alt="{{ $villa->name }}">
-                            <div class="villa-card__flash">
-                                <!-- Optionally add flash labels here -->
-                            </div>
-                            <div class="villa-card__btns">
-                                <a class="villoz-image-popup" href="#" data-gallery-options='{
+            <div class="item">
+                <div class="villa-card wow fadeInUp" data-wow-delay="100ms">
+                    <div class="villa-card__image">
+                        <img src="{{ asset($villa->image) }}" alt="{{ $villa->name }}">
+                        <div class="villa-card__flash">
+                            <!-- Optionally add flash labels here -->
+                        </div>
+                        <div class="villa-card__btns">
+                            <a class="villoz-image-popup" href="#" data-gallery-options='{
                                     "items": [
                                         {
                                             "src": "{{ asset($villa->image) }}"
@@ -114,21 +115,23 @@
                                     },
                                     "type": "image"
                                 }'><span class="icon-camera"></span><span class="villa-card__btns__count">1</span></a>
-                                <a class="video-popup" href="https://www.youtube.com/watch?v=0MuL8fd3pb8"><span class="icon-video"></span></a>
-                            </div>
-                        </div>
-                        <div class="villa-card__content">
-                            <p class="villa-card__address">{{ $villa->description_about }}</p>
-                            <h3 class="villa-card__title"><a href="{{ route('payment', $villa->id) }}">{{ $villa->name }}</a></h3>
-                            <div class="villa-card__price">${{ $villa->price }} <span class="villa-card__price__shift">/ Night</span></div>
-                            <ul class="list-unstyled villa-card__meta">
-                                <li><span class="icon-bed"></span>3 beds</li>
-                                <li><span class="icon-bath"></span>2 baths</li>
-                                <li><span class="icon-users"></span>12 guests</li>
-                            </ul>
                         </div>
                     </div>
+                    <div class="villa-card__content">
+                        <p class="villa-card__address">{{ $villa->description_about }}</p>
+                        <h3 class="villa-card__title"><a href="{{ route('payment', $villa->id) }}">{{ $villa->name
+                                }}</a></h3>
+                        <div class="villa-card__price">${{ $villa->price }} <span class="villa-card__price__shift">/
+                                Night</span></div>
+                        <ul class="list-unstyled villa-card__meta">
+                            <li><span class="icon-bed"></span>{{$villa->bed_count}} beds</li>
+                            <li><span class="icon-bath"></span>{{$villa->bath_count}} baths</li>
+                            <li><span class="icon-users"></span>{{$villa->guest_count}} guests</li>
+                            
+                        </ul>
+                    </div>
                 </div>
+            </div>
             @endforeach
         </div>
     </div>
