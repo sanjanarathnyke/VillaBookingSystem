@@ -127,7 +127,6 @@
                             <li><span class="icon-bed"></span>{{$villa->bed_count}} beds</li>
                             <li><span class="icon-bath"></span>{{$villa->bath_count}} baths</li>
                             <li><span class="icon-users"></span>{{$villa->guest_count}} guests</li>
-                            
                         </ul>
                     </div>
                 </div>
