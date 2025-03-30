@@ -9,7 +9,7 @@
 		"loop": true,
 		"smartSpeed": 700,
 		"animateOut": "fadeOut",
-		"autoplayTimeout": 5000, 
+		"autoplayTimeout": 5000,
 		"nav": true,
 		"navText": ["<span class=\"icon-left-arrow\"></span>","<span class=\"icon-right-arrow\"></span>"],
 		"dots": false,

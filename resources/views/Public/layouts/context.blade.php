@@ -87,9 +87,9 @@
                 </div><!-- /.container-fluid -->
             </header><!-- /.main-header -->
         </div>
-        
+
         {{--header section ends--}}
-        
+
         @yield('content');
 
         {{--footer section starts--}}
@@ -170,7 +170,7 @@
         </footer><!-- /.main-footer -->
 
         {{--footer section ends--}}
-        
+
     </div><!-- /.page-wrapper -->
 
 
@@ -267,7 +267,9 @@
     <script src="{{ asset('assets/vendors/jquery-lettering/jquery.lettering.min.js') }}"></script>
     <!-- Template JS -->
     <script src="{{ asset('assets/js/villoz.js') }}"></script>
-    
+
+    <script src="{{ asset('assets/js/booking.js') }}"></script>
+
 </body>
 
 </html>

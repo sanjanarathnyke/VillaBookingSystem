@@ -66,7 +66,7 @@
                 "loop": true,
                 "smartSpeed": 700,
                 "animateOut": "slideOutDown",
-                "autoplayTimeout": 6000, 
+                "autoplayTimeout": 6000,
                 "nav": true,
                 "navText": ["<span class=\"icon-left-arrow\"></span>","<span class=\"icon-right-arrow\"></span>"],
                 "dots": false,
@@ -106,12 +106,21 @@
                             @endforeach
                         </div>
 
-                        <h4 class="villa-details-three__content__title mb32">Location</h4>
-                        <div class="google-map google-map__">
-                            <iframe title="template google map"
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4562.753041141002!2d-118.80123790098536!3d34.152323469614075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80e82469c2162619%3A0xba03efb7998eef6d!2sCostco+Wholesale!5e0!3m2!1sbn!2sbd!4v1562518641290!5m2!1sbn!2sbd"
-                                class="map__" allowfullscreen></iframe>
+                        <div class="villa-details-three__content__title mb32">Location</div>
+                        <div class="location-details">
+                            @if(isset($villa))
+                            @php
+                            $addressParts = explode(',', $villa->address);
+                            @endphp
+                            <p><strong>Address:</strong></p>
+                            @foreach($addressParts as $part)
+                            <p>{{ trim($part) }}</p>
+                            @endforeach
+                            @else
+                            <p><strong>Address:</strong> Not available</p>
+                            @endif
                         </div>
+
                         <!-- /.google-map -->
                         <div class="villa-details-three__comment">
                             <h4 class="villa-details-three__comment__title">Fun Was to Discover This</h4>
@@ -167,7 +176,7 @@
 
                                             <!-- Hidden input to store total price -->
                                             <input type="hidden" name="total_price" id="total_price_input"
-                                                value="{{ $villa->price }}">
+                                                data-base-price="{{ $villa->price }}" value="{{ $villa->price }}">
 
                                             <!-- Total Price Section -->
                                             <div
@@ -181,24 +190,26 @@
                                                 <i class="bi bi-calendar-check me-2"></i>Book Now
                                             </button>
                                         </form>
+                                        <!-- Bootstrap Toast Message -->
+                                        <div class="toast-container position-fixed bottom-0 end-0 p-3">
+                                            <div id="successToast"
+                                                class="toast align-items-center text-white bg-success border-0"
+                                                role="alert" aria-live="polite" aria-atomic="true">
+                                                <div class="d-flex">
+                                                    <div class="toast-body">
+                                                        Booking confirmed! Check your email for details.
+                                                    </div>
+                                                    <button type="button" class="btn-close btn-close-white me-2 m-auto"
+                                                        data-bs-dismiss="toast" aria-label="Close"></button>
+                                                </div>
+                                            </div>
+                                        </div>
+
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- JavaScript for Dynamic Price Calculation -->
-                        <script>
-                            document.addEventListener('DOMContentLoaded', function() {
-                            document.getElementById('extra_guests').addEventListener('change', function() {
-                            let extraGuests = parseInt(this.value);
-                            let basePrice = parseFloat("{{ $villa->price }}");
-                            let totalPrice = basePrice + (extraGuests * 20);
-                            
-                            document.getElementById('totalPrice').textContent = '$' + totalPrice.toFixed(2);
-                            document.getElementById('total_price_input').value = totalPrice;
-                        });
-                    });
-                        </script>
 
                     </div>
                 </div>
