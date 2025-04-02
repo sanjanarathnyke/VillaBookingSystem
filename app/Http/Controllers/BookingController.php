@@ -11,7 +11,6 @@ class BookingController extends Controller
 {
     public function store(Request $request)
     {
-        // Validate and store booking data
         $validated = $request->validate([
             'checkin' => 'required|date',
             'checkout' => 'required|date|after:checkin',
@@ -22,10 +21,8 @@ class BookingController extends Controller
 
         Booking::create($validated);
 
-        // Send the email
         Mail::to($validated['email'])->send(new BookingConfirmation($validated));
 
-        // Redirect or return a response
         return redirect()->back()->with('success', 'Booking confirmed! Check your email for details.');
     }
 }

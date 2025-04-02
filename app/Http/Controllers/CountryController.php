@@ -28,4 +28,10 @@ class CountryController extends Controller
         // dd($villas);
         return view('Public.singleitem', compact('country', 'villas'));
     }
+
+    public function index()
+    {
+        $countries = Country::all();
+    return view('Public.Dashboard.dashboard-country', compact('countries'));
+    }
 }

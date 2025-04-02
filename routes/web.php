@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\BookingController;
 use App\Http\Controllers\CountryController;
+use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\PaymentController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\VillaController;
@@ -54,9 +55,4 @@ Route::post('/register', [RegisterController::class, 'register'])->name('registe
 Route::get('/login', [RegisterController::class, 'showLoginForm'])->name('login');
 Route::post('/login', [RegisterController::class, 'login'])->name('login-user');
 
-// Dashboard Route (Restricted to Admin Emails)
-Route::middleware('checkAdminEmail')->group(function () {
-    Route::get('/dashboard', function () {
-        return view('Public.dashboard');
-    })->name('dashboard');
-});
+
