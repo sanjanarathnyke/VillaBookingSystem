@@ -55,4 +55,7 @@ Route::post('/register', [RegisterController::class, 'register'])->name('registe
 Route::get('/login', [RegisterController::class, 'showLoginForm'])->name('login');
 Route::post('/login', [RegisterController::class, 'login'])->name('login-user');
 
+Route::get('/test',function(){
+return view('Dashboard.dashboard');
+});
 
