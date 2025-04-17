@@ -55,7 +55,20 @@ Route::post('/register', [RegisterController::class, 'register'])->name('registe
 Route::get('/login', [RegisterController::class, 'showLoginForm'])->name('login');
 Route::post('/login', [RegisterController::class, 'login'])->name('login-user');
 
-Route::get('/test',function(){
-return view('Dashboard.dashboard');
+Route::get('/dashboard',function(){
+return view('Admin.dashboard');
 });
+Route::get('/dashboard/villa-info',function(){
+    return view('Admin.villa-info');
+})->name('villa-info');
+Route::get('/dashboard/villa-details',function(){
+    return view('Admin.villa-details');
+})->name('villa-details');
+Route::get('/dashboard/villa-bookings',function(){
+    return view('Admin.villa-bookings');
+})->name('villa-bookings');
+Route::get('/dashboard/country-info',function(){
+    return view('Admin.country-info');
+})->name('country-info');
 
+Route::post('/villas/store', [DashboardController::class, 'store'])->name('villas.store');
