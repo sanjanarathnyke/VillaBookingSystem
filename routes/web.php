@@ -71,4 +71,4 @@ Route::get('/dashboard/country-info',function(){
     return view('Admin.country-info');
 })->name('country-info');
 
-Route::post('/villas/store', [DashboardController::class, 'store'])->name('villas.store');
+
