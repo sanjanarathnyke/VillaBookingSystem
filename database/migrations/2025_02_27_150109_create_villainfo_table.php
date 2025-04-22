@@ -13,10 +13,10 @@ return new class extends Migration
     {
         Schema::create('villainfo', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('villa_id')->constrained('villas')->onDelete('cascade'); // Foreign key
-            $table->text('fun_discovery'); // Fun Ways to Discover This
-            $table->text('amenities'); // Amenities
-            $table->text('overview'); // Overview
+            $table->foreignId('villa_id')->constrained('villas')->onDelete('cascade'); 
+            $table->text('fun_discovery');
+            $table->text('amenities');
+            $table->text('overview');
             $table->timestamps();
         });
     }

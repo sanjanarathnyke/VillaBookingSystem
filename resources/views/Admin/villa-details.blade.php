@@ -1,4 +1,5 @@
 @extends('Admin.Layouts.context')
+@section('content')
 <div class="main-content">
     <div class="page-content">
         <div class="container-fluid">
@@ -25,19 +26,25 @@
                             <h4 class="card-title">Villa Details</h4>
                         </div>
                         <div class="card-body">
-                            <form action="/submit-villa-details" method="POST" enctype="multipart/form-data">
+                            <form action="{{ route('villa-info.store') }}" method="POST" enctype="multipart/form-data">
                                 @csrf
                                 <div class="mb-3 row">
                                     <label for="villa-name" class="col-md-2 col-form-label">Villa Name</label>
                                     <div class="col-md-10">
-                                        <input class="form-control" type="text" id="villa-name" name="villaname" required>
+                                        <select class="form-control" id="villa-name" name="villa_id" required>
+                                            <option value="">Select a Villa</option>
+                                            @foreach ($villas as $villa)
+                                                <option value="{{ $villa->id }}">{{ $villa->name }}</option>
+                                            @endforeach
+                                        </select>
+
                                     </div>
                                 </div>
 
                                 <div class="mb-3 row">
                                     <label for="fun-discovery" class="col-md-2 col-form-label">Fun Discovery</label>
                                     <div class="col-md-10">
-                                        <textarea class="form-control" id="fun-discovery" name="fundescovery" rows="3" required></textarea>
+                                        <textarea class="form-control" id="fun-discovery" name="fun_discovery" rows="3" required></textarea>
                                     </div>
                                 </div>
 
@@ -66,18 +73,6 @@
         </div>
     </div>
 
-    <footer class="footer">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-sm-6">
-                    <script>document.write(new Date().getFullYear())</script> &copy; Dashonic.
-                </div>
-                <div class="col-sm-6">
-                    <div class="text-sm-end d-none d-sm-block">
-                        Crafted with <i class="mdi mdi-heart text-danger"></i> by <a href="https://Pichforest.com/" target="_blank" class="text-reset">Pichforest</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
+    @include('Admin.Footer.dashboard-footer')
 </div>
+@endsection

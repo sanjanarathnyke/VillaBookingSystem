@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\BookingController;
 use App\Http\Controllers\CountryController;
 use App\Http\Controllers\DashboardController;
@@ -19,12 +20,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Redirect home to login page
+
 Route::get('/', function () {
     return view('welcome');
 })->name('home');
 
-// Public Routes (Accessible by any user)
+
 Route::get('single-item', function () {
     return view('Public.singleitem');
 })->name('single-item');
@@ -37,38 +38,36 @@ Route::get('/countries', [CountryController::class, 'showCountries'])->name('sho
 Route::get('/country/{id}', [CountryController::class, 'showSingleCountry'])->name('singleitem');
 Route::get('/villas', [VillaController::class, 'index'])->name('villas.index');
 
-// Payment Route (Restricted to Logged-in Users)
+
 Route::get('/payment/{id}', [PaymentController::class, 'show'])
     ->middleware('auth')
     ->name('payment');
 
-// Booking Route (Restricted to Logged-in Users)
+
 Route::post('/book-tour', [BookingController::class, 'store'])
     ->middleware('auth')
     ->name('storevalues');
 
 
-// Authentication Routes
 Route::get('/register', [RegisterController::class, 'showRegisterForm'])->name('register');
 Route::post('/register', [RegisterController::class, 'register'])->name('register-user');
 
 Route::get('/login', [RegisterController::class, 'showLoginForm'])->name('login');
 Route::post('/login', [RegisterController::class, 'login'])->name('login-user');
 
-Route::get('/dashboard',function(){
-return view('Admin.dashboard');
-});
-Route::get('/dashboard/villa-info',function(){
-    return view('Admin.villa-info');
-})->name('villa-info');
-Route::get('/dashboard/villa-details',function(){
-    return view('Admin.villa-details');
-})->name('villa-details');
-Route::get('/dashboard/villa-bookings',function(){
-    return view('Admin.villa-bookings');
-})->name('villa-bookings');
-Route::get('/dashboard/country-info',function(){
-    return view('Admin.country-info');
-})->name('country-info');
 
+Route::prefix('dashboard')
+    ->middleware(['auth','admin'])
+    ->group(function () {
+        Route::get('/', [AdminController::class, 'showDashboard'])->name('dashboard');
+        Route::get('/villa-bookings', [AdminController::class, 'showVillaBookings'])->name('villa-bookings');
+        Route::get('/country-info', [AdminController::class, 'showCountryInfo'])->name('country-info');
 
+        Route::post('/country-store', [DashboardController::class, 'store'])->name('country.store');
+
+        Route::get('/villas', [DashboardController::class, 'create'])->name('villas.create');
+        Route::post('/villas-store', [DashboardController::class, 'storeVilla'])->name('villas.store');
+
+        Route::get('/villa-info', [DashboardController::class, 'createvillainfo'])->name('villa-info.create');
+        Route::post('/villa-info-store', [DashboardController::class, 'storevillaInfo'])->name('villa-info.store');
+    });

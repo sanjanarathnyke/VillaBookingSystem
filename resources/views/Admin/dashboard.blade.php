@@ -6,12 +6,12 @@
             <div class="row">
                 <div class="col-12">
                     <div class="page-title-box d-flex align-items-center justify-content-between">
-                        <h4 class="mb-0">Sales Analytics</h4>
+                        <h4 class="mb-0">villaoz | Admin Dashboard</h4>
 
                         <div class="page-title-right">
                             <ol class="breadcrumb m-0">
-                                <li class="breadcrumb-item"><a href="javascript: void(0);">Dashonic</a></li>
-                                <li class="breadcrumb-item active">Sales Analytics</li>
+                                <li class="breadcrumb-item"><a href="javascript: void(0);">&copy;villaoz</a></li>
+                                <li class="breadcrumb-item active">villaoz | Admin Dashboard</li>
                             </ol>
                         </div>
 
@@ -250,7 +250,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <h4 class="card-title mb-4">Sales Analytics</h4>
+                            <h4 class="card-title mb-4">villaoz | Admin Dashboard</h4>
 
                             <div class="mt-1">
                                 <ul class="list-inline main-chart mb-0 text-center">
