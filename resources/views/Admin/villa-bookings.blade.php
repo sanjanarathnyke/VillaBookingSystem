@@ -35,7 +35,7 @@
                                             <th scope="col" class="align-middle">Check-out Date</th>
                                             <th scope="col" class="align-middle">Guest Email</th>
                                             <th scope="col" class="align-middle">Additional Guests</th>
-                                            <th scope="col" class="align-middle">Total Amount ($)</th>
+                                            <th scope="col" class="align-middle text-end">Total Amount ($)</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -46,7 +46,7 @@
                                             <td>{{ \Carbon\Carbon::parse($booking->checkout)->format('M d, Y') }}</td>
                                             <td>{{ $booking->email }}</td>
                                             <td class="text-center">{{ $booking->extra_guests }}</td>
-                                            <td class="text-end">${{ number_format($booking->total_price, 2) }}</td>
+                                            <td class="text-end pe-4">{{ number_format($booking->total_price, 2) }}</td>
                                         </tr>
                                         @endforeach
                                     </tbody>

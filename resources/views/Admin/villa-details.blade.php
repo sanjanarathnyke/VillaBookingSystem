@@ -1,4 +1,4 @@
-@extends('Admin.Layouts.context')
+@extends('Admin.Layouts.context')   
 @section('content')
 <div class="main-content">
     <div class="page-content">

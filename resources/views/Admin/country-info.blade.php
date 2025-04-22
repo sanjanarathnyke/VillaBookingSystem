@@ -38,14 +38,17 @@
                                 <div class="mb-3 row">
                                     <label for="country-image" class="col-md-2 col-form-label">Country Image</label>
                                     <div class="col-md-10">
-                                        <input class="form-control" type="file" id="country-image" name="image" accept="image/*" required>
+                                        <input class="form-control" type="file" id="country-image" name="image"
+                                            accept="image/*" required>
                                     </div>
                                 </div>
 
                                 <div class="mb-3 row">
-                                    <label for="languages-spoken" class="col-md-2 col-form-label">Languages Spoken</label>
+                                    <label for="languages-spoken" class="col-md-2 col-form-label">Languages
+                                        Spoken</label>
                                     <div class="col-md-10">
-                                        <input class="form-control" type="text" id="languages-spoken" name="languagespoke" required>
+                                        <input class="form-control" type="text" id="languages-spoken"
+                                            name="languagespoke" required>
                                     </div>
                                 </div>
 
@@ -64,9 +67,11 @@
                                 </div>
 
                                 <div class="mb-3 row">
-                                    <label for="visa-requirements" class="col-md-2 col-form-label">Visa Requirements</label>
+                                    <label for="visa-requirements" class="col-md-2 col-form-label">Visa
+                                        Requirements</label>
                                     <div class="col-md-10">
-                                        <textarea class="form-control" id="visa-requirements" name="visarequimnets" rows="3" required></textarea>
+                                        <textarea class="form-control" id="visa-requirements" name="visarequimnets"
+                                            rows="3" required></textarea>
                                     </div>
                                 </div>
 
@@ -74,7 +79,8 @@
                                     <label for="area" class="col-md-2 col-form-label">Area</label>
                                     <div class="col-md-10">
                                         <div class="input-group">
-                                            <input class="form-control" type="number" id="area" name="area" min="0" step="0.01" required>
+                                            <input class="form-control" type="number" id="area" name="area" min="0"
+                                                step="0.01" required>
                                             <span class="input-group-text">sq km</span>
                                         </div>
                                     </div>
@@ -83,7 +89,8 @@
                                 <div class="mb-3 row">
                                     <label for="description" class="col-md-2 col-form-label">Description</label>
                                     <div class="col-md-10">
-                                        <textarea class="form-control" id="description" name="desctription" rows="5" required></textarea>
+                                        <textarea class="form-control" id="description" name="desctription" rows="5"
+                                            required></textarea>
                                     </div>
                                 </div>
 
